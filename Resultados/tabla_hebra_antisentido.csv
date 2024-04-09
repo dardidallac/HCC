@@ -1,0 +1,5 @@
+N°ORF,Inicio,Fin,Longitud ADN,Longitud de proteina,% GC,% aa polares neutros,% aa no polares,% aa negativos,% aa positivos,% aa aromáticos
+   1, 483, 412,  72,  23, 51.39, 30.43, 34.78,  0.00, 13.04, 21.74
+   2, 364, 329,  36,  11, 41.67, 18.18, 54.55,  0.00, 18.18,  9.09
+   3, 212,  72, 141,  46, 45.39, 21.74, 45.65,  4.35, 21.74,  6.52
+   4, 161,  72,  90,  29, 45.56, 27.59, 41.38,  0.00, 27.59,  3.45
