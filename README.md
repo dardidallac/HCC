@@ -26,6 +26,14 @@ Tener instalada la librería `matplotlib` para la generación de gráficos:
 pip install matplotlib
 ````
 
+### Manual ###
+Ejecuta el script desde la terminal indicando la ruta del archivo FASTA:
+
+```bash
+python Analisis_de_secunecias_ADN.py secuencia.fasta
+````
+python analizador.py secuencia.fasta [nombre_salida.txt]
+
 
 ### Resultados ###
 
