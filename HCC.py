@@ -28,7 +28,7 @@ def buscar_orf (adn):
     while i < len(adn):
         if estado == 0:
             if adn[i] == "A":
-                estado = 1 
+                estado = 1
                 marco += adn[i]
                 inicio = i+1
         elif estado == 1:
@@ -36,7 +36,7 @@ def buscar_orf (adn):
                 estado = 2
                 marco += adn[i]
             elif adn[i] == "A":
-                estado = 1 
+                estado = 1
                 inicio = i+1
             else:
                 estado = 0
@@ -108,10 +108,10 @@ def buscar_orf (adn):
 def corrige(lista_in,cant):
     for i in range(len(lista_in)):
         lista_in[i][1] = cant - lista_in[i][1] + 1
-        lista_in[i][2] = cant - lista_in[i][2] + 1  
+        lista_in[i][2] = cant - lista_in[i][2] + 1
     return lista_in
 
-# Funcion que calcula el porcentaje de GC 
+# Funcion que calcula el porcentaje de GC
 
 def porcentajeGC(sequence):
     if len(sequence)==0:
@@ -146,7 +146,7 @@ def translate(seq):
     'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L',
     'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_',
     'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W',}
-    
+
     proteina = ""
     for i in range(0, len(seq), 3):
         if len(seq)%3 == 0:
@@ -186,7 +186,7 @@ def buscar_transmembrana (prot):
     for aa in prot:
         if estado == 0:
             if aa in "AVLIMPG":
-                estado = 1 
+                estado = 1
                 fragmento += aa
                 inicio = index
         elif estado == 1:
@@ -255,7 +255,7 @@ for i in range (0, len(list_orfs_i)):
     list_orfs_i[i].append(clasesaa(list_orfs_i[i][4]))
     plt.pie(x=list_orfs_i[i][5], labels=clases)
     plt.title("Clases de aminoacidos - Hebra antisentido - Prot " + str(i+1))
-    plt.savefig("Clases de aminoacidos - Hebra sentido - Prot " + str(i+1))
+    plt.savefig("Clases de aminoacidos - Hebra antisentido - Prot " + str(i+1))
     plt.close()
 
 for i in range (0, len(list_orfs_d)):
@@ -294,10 +294,19 @@ for orfs in list_orfs_d:
     fseq1.write(orfs[0]+"\n\n")
     fseq1.write(">ORF{:d} aa sec\n".format(cont_filas))
     fseq1.write(orfs[4]+"\n\n")
+    ftm1 = open("transmembrana_hebra_sentido.txt", "w")
+    ftm1.write("\nORF {:d}:\n".format(cont_filas))
+    if len(orfs[6]) == 0:
+        ftm1.write("  No se encontraron regiones transmembrana.\n")
+    else:
+        for frag in orfs[6]:
+            ftm1.write("  Fragmento: {}\n".format(frag[0]))
+            ftm1.write("  Posicion en proteina: {:d} - {:d}\n".format(frag[1], frag[2]))
     cont_filas +=1
 
 fsal1.close()
 fseq1.close()
+ftm1.close()
 
 #Para los marcos en la hebra antisentido
 
@@ -317,7 +326,16 @@ for orfs in list_orfs_i:
     fseq2.write(orfs[0]+"\n\n")
     fseq2.write(">ORF{:d} aa sec\n".format(cont_filas))
     fseq2.write(orfs[4]+"\n\n")
+    ftm2 = open("transmembrana_hebra_antisentido.txt", "w")
+    ftm2.write("\nORF {:d}:\n".format(cont_filas))
+    if len(orfs[6]) == 0:
+        ftm2.write("  No se encontraron regiones transmembrana.\n")
+    else:
+        for frag in orfs[6]:
+            ftm2.write("  Fragmento: {}\n".format(frag[0]))
+            ftm2.write("  Posicion en proteina: {:d} - {:d}\n".format(frag[1], frag[2]))
     cont_filas +=1
 
 fsal2.close()
 fseq2.close()
+ftm2.close()
