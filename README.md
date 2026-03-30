@@ -17,8 +17,8 @@ Visualización: Genera gráficos de la composición de aminoácidos de cada secu
 
 Resulatdos: Genera reportes en .csv, archivos de secuencia en .fasta y reportes de texto .txt.
 
-### Manual ###
-Tener instalada la siguiente librería de Python:
+### Requisito ###
+Tener instalada la librería `matplotlib` para la generación de gráficos:
 
-Bash
+```bash
 pip install matplotlib
