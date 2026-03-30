@@ -22,3 +22,37 @@ Tener instalada la librería `matplotlib` para la generación de gráficos:
 
 ```bash
 pip install matplotlib
+````
+
+
+## 📂 Estructura de Resultados ##
+
+El programa genera un ecosistema de archivos organizados por el tipo de información y la hebra analizada (**sentido** y **antisentido**). 
+
+### 1. Reportes Tabulares (`.csv`)
+Ideales para abrir en Excel o procesar con librerías de datos como Pandas.
+* `tabla_hebra_sentido.csv`: Contiene el N° de ORF, posiciones de inicio/fin, longitud del ADN, longitud de la proteína, %GC y el desglose porcentual de las 5 clases de aminoácidos.
+* `tabla_hebra_antisentido.csv`: Misma estructura, pero para la hebra complementaria reversa.
+
+### 2. Secuencias Genómicas y Proteicas (`.fasta`)
+* `sec_hebra_sentido.fasta` / `sec_hebra_antisentido.fasta`: Almacena las secuencias de nucleótidos de cada ORF y su correspondiente traducción a aminoácidos en formato estándar FASTA.
+
+### 3. Análisis de Dominios Transmembrana (`.txt`)
+* `transmembrana_hebra_sentido.txt` / `transmembrana_hebra_antisentido.txt`: Reporte detallado que indica:
+    * Si se encontraron fragmentos hidrofóbicos.
+    * La secuencia del fragmento no polar.
+    * La posición exacta (índices) dentro de la proteína.
+
+### 4. Visualización Estadística (`.png`)
+El script genera automáticamente gráficos de pastel para cada ORF detectado, nombrados siguiendo el patrón:
+`Clases de aminoacidos - [Hebra] - Prot [N°].png`
+
+| Categoría | Aminoácidos Incluidos |
+| :--- | :--- |
+| **Polares Neutros** | S, T, Q, N, C |
+| **No Polares** | A, V, L, I, M, P, G |
+| **Ácidos (Negativos)** | D, E |
+| **Básicos (Positivos)** | K, R, H |
+| **Aromáticos** | F, Y, W |
+
+---
