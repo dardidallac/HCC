@@ -1,6 +1,6 @@
 # Analizador de Secuencias de ADN 🧬 #
 
-Este script en Python permite procesar archivos de secuencias biológicas en formato FASTA. Realiza un análisis exhaustivo que incluye la identificación de marcos abiertos de lectura (ORFs), traducción a aminoácidos, cálculo de contenido GC, clasificación de aminoácidos y detección de posibles dominios transmembrana.
+Este script en lenguaje Python permite procesar archivos de secuencias biológicas en formato FASTA. Realiza un análisis que incluye la identificación de marcos abiertos de lectura (ORFs), traducción a aminoácidos, cálculo de contenido GC, clasificación de aminoácidos y detección de posibles dominios transmembrana.
 
 ### Características ###
 
@@ -44,10 +44,10 @@ El programa genera distintos archivos organizados por el tipo de información y 
 
 * `sec_hebra_sentido.fasta` / `sec_hebra_antisentido.fasta`: Almacena las secuencias de nucleótidos de cada ORF y su correspondiente traducción a aminoácidos en formato FASTA.
 
-* `transmembrana_hebra_sentido.txt` / `transmembrana_hebra_antisentido.txt`: Reporte detallado que indica:
+* `transmembrana_hebra_sentido.txt` / `transmembrana_hebra_antisentido.txt`: un reporte que indica:
     * Si se encontraron fragmentos hidrofóbicos.
     * La secuencia del fragmento.
-    * La posición exacta dentro de la proteína.
+    * La posición dentro de la secuencia.
 
 El script genera gráficos para cada ORF detectado, nombrados de la siguiente manera:
 `Clases de aminoacidos - [Hebra] - Prot [N°].png`
