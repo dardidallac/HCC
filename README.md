@@ -52,3 +52,4 @@ El programa genera distintos archivos organizados por el tipo de información y 
 El script genera gráficos para cada ORF detectado, nombrados de la siguiente manera:
 `Clases de aminoacidos - [Hebra] - Prot [N°].png`
 
+Open In Colab
