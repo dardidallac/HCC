@@ -3,6 +3,7 @@
 Este script en Python permite procesar archivos de secuencias biológicas en formato FASTA. Realiza un análisis exhaustivo que incluye la identificación de marcos abiertos de lectura (ORFs), traducción a aminoácidos, cálculo de contenido GC, clasificación de aminoácidos y detección de posibles dominios transmembrana.
 
 ### Características ###
+
 Búsqueda de ORFs: Identificar codones de inicio (ATG) y parada (TAA, TAG, TGA) en ambas hebras (sentido y antisentido).
 
 Traducción genética: Traduce las secuencias nucleotícida a aminoacidos utilizando la tabla de codones estándar universal.
@@ -18,6 +19,7 @@ Visualización: Genera gráficos de la composición de aminoácidos de cada secu
 Resulatdos: Genera reportes en .csv, archivos de secuencia en .fasta y reportes de texto .txt.
 
 ### Requisito ###
+
 Tener instalada la librería `matplotlib` para la generación de gráficos:
 
 ```bash
@@ -27,7 +29,7 @@ pip install matplotlib
 
 ## Estructura de Resultados ##
 
-El programa genera un ecosistema de archivos organizados por el tipo de información y la hebra analizada (**sentido** y **antisentido**). 
+El programa genera distintos archivos organizados por el tipo de información y la hebra analizada (**sentido** y **antisentido**). 
 
 ### 1. Reportes Tabulares (`.csv`)
 Ideales para abrir en Excel o procesar con librerías de datos como Pandas.
