@@ -52,4 +52,35 @@ El programa genera distintos archivos organizados por el tipo de información y 
 El script genera gráficos para cada ORF detectado, nombrados de la siguiente manera:
 `Clases de aminoacidos - [Hebra] - Prot [N°].png`
 
-https://colab.research.google.com/github/dardidallac/HCC/blob/main/Analisis_de_secunecias_ADN.ipynb
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dardidallac/HCC/blob/main/Analisis_de_secunecias_ADN.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Programa con las funciones ordenadas"
+      ],
