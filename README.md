@@ -47,9 +47,9 @@ El programa genera distintos archivos organizados por el tipo de información y 
 * `sec_hebra_sentido.fasta` / `sec_hebra_antisentido.fasta`: Almacena las secuencias de nucleótidos de cada ORF y su correspondiente traducción a aminoácidos en formato FASTA.
 
 * `transmembrana_hebra_sentido.txt` / `transmembrana_hebra_antisentido.txt`: un reporte que indica:
-    * Si se encontraron fragmentos hidrofóbicos.
-    * La secuencia del fragmento.
-    * La posición dentro de la secuencia.
+    * Si se encontraron fragmentos con aminoácidos hidrofóbicos.
+    * La secuencia de aminoácidos del fragmento.
+    * La posición de esa región dentro de la secuencia.
 
 El script genera gráficos para cada ORF detectado, nombrados de la siguiente manera:
 `Clases de aminoacidos - [Hebra] - Prot [N°].png`
