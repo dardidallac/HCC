@@ -2,7 +2,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dardidallac/HCC/blob/main/Analisis_de_secunecias_ADN.ipynb)
 
-Este script en lenguaje Python permite procesar archivos de secuencias biológicas en formato FASTA. Realiza un análisis que incluye la identificación de marcos abiertos de lectura (ORFs), traducción a aminoácidos, cálculo de contenido GC, clasificación de aminoácidos y detección de posibles dominios transmembrana.
+Este script en lenguaje Python permite procesar archivos de secuencias biológicas en formato FASTA. Realiza un análisis que incluye la identificación de marcos abiertos de lectura (ORFs), traducción a aminoácidos, cálculo de contenido GC, clasificación de aminoácidos y detección de posibles regiones transmembrana.
 
 ### Características ###
 
