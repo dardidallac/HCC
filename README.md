@@ -38,7 +38,7 @@ python Analisis_de_secunecias_ADN.py secuencia.fasta
 
 ### Resultados ###
 
-El programa genera distintos archivos organizados por el tipo de información y la hebra analizada (**sentido** y **antisentido**). 
+El programa genera distintos archivos organizados por el tipo de información y la hebra analizada (sentido y antisentido). 
 
 
 * `tabla_hebra_sentido.csv`: Contiene el N° de ORF, posiciones de inicio/fin, longitud del ADN, longitud de la proteína, %GC y el porcentaje de las 5 clases de aminoácidos.
